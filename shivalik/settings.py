@@ -54,7 +54,7 @@ ROOT_URLCONF = 'shivalik.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "template")],
+        'DIRS': [os.path.join(BASE_DIR, "template"),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,5 +119,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
