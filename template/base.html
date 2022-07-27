@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shivalik ifsc</title>
+
+  </head>
+  <body style="background:light">
+        <div style="">
+          <form>
+            <div>
+              <label for="">IFSC SERCH</label>
+              <input type="text" name="if">
+            </div>
+            <div>
+              <button type="submit">SERCH</button>
+            </div>
+          </form>
+        </div>
+        {% for n in d %}
+        <div style="color:green">
+          <p>{{n}}</p>
+        </div>
+        {% endfor %}
+  </body>
+</html>
