@@ -1,1 +1,1 @@
-web:
+web:waitress-serve --port=$PORT shivalik.wsgi:application
