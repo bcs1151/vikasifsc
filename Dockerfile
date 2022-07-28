@@ -3,4 +3,4 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE $PORT
-CMD web: waitress-serve --port=$PORT shivalik.wsgi:application
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT apps:app
